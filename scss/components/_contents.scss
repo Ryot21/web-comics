@@ -1,0 +1,108 @@
+// コンテンツ
+.c-container{
+	width: 100vw;
+	height: auto;
+}
+
+.c-contents{
+	&-inner{
+		width: 90%;
+		margin: auto;
+		@include min(768){
+			width: 95%;
+		}
+	}
+
+	&.-imgBg{//背景画像
+		position: relative;
+		.c-contentsBox{
+			position: absolute;
+			// f-view > 家族
+			&.-f-family{
+				top: 50%;
+				left: 80%;
+				width: 33%;
+				z-index: 2;
+				@include min(768){
+					top: 10%;
+					left: 56%;
+					width: 30%;
+				}
+			}
+			&.-f-telop{
+				top: 50%;
+				left: 80%;
+				width: 33%;
+				z-index: 2;
+				@include min(768){
+					top: 6%;
+					left: 27%;
+					width: 46%;
+				}
+			}
+			&.-f-title{
+				display: inline-block;
+				top: 50%;
+				left: 80%;
+				width: auto;
+				z-index: 2;
+				@include min(768){
+					top: 75%;
+					left: 28%;
+				}
+			}
+			// ★キラキラ
+			&.-f-star00{
+				top: 47%;
+				left: 1%;
+				width: 6%;
+			}
+			&.-f-star01{
+				top: 30%;
+				left: 1%;
+				width: 3.5%;
+			}
+
+			&.-f-star02{
+				top: 30%;
+				left: 13%;
+				width: 6%;
+			}
+			&.-f-star03{
+				top: 30%;
+				left: 26%;
+				width: 6%;
+			}
+			&.-f-star04{
+				top: 55%;
+				left: 13%;
+				width: 6%;
+			}
+			&.-f-star05{
+				top: 55%;
+				left: 26%;
+				width: 6%;
+			}
+			&.-f-star06{
+				top: 60%;
+				left: 39%;
+				width: 4%;
+			}
+			&.-f-star07{
+				top: 57%;
+				left: 53%;
+				width: 3.5%;
+			}
+			&.-f-star08{
+				top: 57%;
+				left: 89%;
+				width: 4.5%;
+			}
+			&.-f-star09{
+				top: 33%;
+				left: 88%;
+				width: 5%;
+			}
+		}
+	}
+}
