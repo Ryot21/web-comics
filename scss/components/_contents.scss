@@ -10,7 +10,11 @@
 		margin: auto;
 		@include min(768){
 			width: 95%;
+			max-width: 1100px;
 		}
+	}
+	&.-f-view{
+		overflow: hidden;
 	}
 
 	&.-imgBg{//背景画像
@@ -19,9 +23,9 @@
 			position: absolute;
 			// f-view > 家族
 			&.-f-family{
-				top: 50%;
-				left: 80%;
-				width: 33%;
+				top: 25%;
+				left: 51%;
+				width: 50%;
 				z-index: 2;
 				@include min(768){
 					top: 10%;
@@ -30,78 +34,173 @@
 				}
 			}
 			&.-f-telop{
-				top: 50%;
-				left: 80%;
-				width: 33%;
+				top: 10%;
+				left: 5%;
+				width: 85%;
 				z-index: 2;
 				@include min(768){
-					top: 6%;
+					top: 3%;
 					left: 27%;
 					width: 46%;
 				}
 			}
 			&.-f-title{
 				display: inline-block;
-				top: 50%;
-				left: 80%;
+				top: 75%;
+				left: 5%;
 				width: auto;
 				z-index: 2;
 				@include min(768){
-					top: 75%;
+					top: 73%;
 					left: 28%;
 				}
 			}
+			&.-f-copy{
+				bottom: 1%;
+				right: 2%;
+				z-index: 3;
+				@include min(768){right: 1%;}
+			}
 			// ★キラキラ
 			&.-f-star00{
-				top: 47%;
+				top: 19%;
 				left: 1%;
 				width: 6%;
+				@include min(768){top: 47%;}
 			}
 			&.-f-star01{
-				top: 30%;
-				left: 1%;
+				top: 35%;
+				left: 4%;
 				width: 3.5%;
+				@include min(768){
+					top: 30%;
+					left: 1%;
+				}
 			}
-
 			&.-f-star02{
-				top: 30%;
-				left: 13%;
+				top: 17%;
+				left: 16%;
 				width: 6%;
+				@include min(768){
+					top: 30%;
+					left: 13%;
+				}
 			}
 			&.-f-star03{
-				top: 30%;
-				left: 26%;
+				top: 32%;
+				left: 17%;
 				width: 6%;
+				@include min(768){
+					top: 30%;
+					left: 26%;
+				}
 			}
 			&.-f-star04{
-				top: 55%;
-				left: 13%;
+				top: 67%;
+				left: 3%;
 				width: 6%;
+				@include min(768){
+					top: 55%;
+					left: 13%;
+				}
 			}
 			&.-f-star05{
-				top: 55%;
-				left: 26%;
+				top: 60%;
+				left: 17%;;
 				width: 6%;
+				@include min(768){
+					top: 55%;
+					left: 26%
+				}
 			}
 			&.-f-star06{
-				top: 60%;
-				left: 39%;
+				top: 18%;
+				left: 32%;
 				width: 4%;
+				@include min(768){
+					top: 60%;
+					left: 39%;
+				}
 			}
 			&.-f-star07{
-				top: 57%;
-				left: 53%;
-				width: 3.5%;
+				top: 58%;
+				left: 30%;
+				width: 4.5%;
+				@include min(768){
+					top: 57%;
+					left: 53%;
+					width: 3.5%;
+				}
 			}
 			&.-f-star08{
-				top: 57%;
-				left: 89%;
-				width: 4.5%;
+				top: 59%;
+				left: 48%;
+				width: 5%;
+				@include min(768){
+					top: 57%;
+					left: 89%;
+					width: 4.5%;
+				}
 			}
 			&.-f-star09{
-				top: 33%;
-				left: 88%;
-				width: 5%;
+				top: 72%;
+				left: 48%;
+				width: 3%;
+				@include min(768){
+					top: 33%;
+					left: 88%;
+					width: 5%;
+				}
+			}
+
+			// プロフィール関係
+			&.-prof-link{
+				top: 75%;
+				left: 15%;
+				width: auto;
+				@include min(768){
+					top: 91%;
+					left: 14%;
+					transform: translate(-50%, -50%);
+				}
+				@include min(1200){left: 13%;}
+				&::after{
+					content: "";
+					position: absolute;
+					top: 49.5%;
+					left: -15%;
+					transform: translateY(-50%);
+					background: url(../images/SVG/icon-link01.svg);
+					background-repeat: no-repeat;
+					width: 13px;
+					height: 13px;
+					@include min(768) {left: -12%;}
+					@include min(1200){left: -15%;}
+				}
+			}
+			&.-prof-link02{
+				top: 83%;
+				left: 15%;
+				width: auto;
+				@include min(768){
+					top: 91%;
+					left: 40.5%;
+					transform: translate(-50%, -50%);
+				}
+				@include min(1200){left: 35.5%;}
+				&::after{
+					content: "";
+					position: absolute;
+					top: 50%;
+					left: -10%;
+					transform: translateY(-50%);
+					background: url(../images/SVG/icon-link02.svg);
+					background-repeat: no-repeat;
+					width: 15px;
+					height: 15px;
+					@include min(768) {left: -9%;}
+					@include min(1200){left: -10%;}
+				}
 			}
 		}
 	}

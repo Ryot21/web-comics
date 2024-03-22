@@ -47,10 +47,6 @@ h1,h2,h3,h4,h5,h6,p,a,span,label,button{
         display: inline;
         text-decoration: underline;
     }
-    &.-huchi{
-        -webkit-text-stroke-width: 3px;
-        -webkit-text-stroke-color: $main-color--b;
-    }
 
     // 位置
     &.-right{text-align: right;}
@@ -84,6 +80,18 @@ h1,h2,h3,h4,h5,h6,p,a,span,label,button{
     // 影
     &.-shadow{filter: drop-shadow(1px 1px 1px rgba(255, 255, 255, 0.637)) !important;}
 
+    // 文字_縁
+    &.-huchi{
+        // 色
+        &.-h-w  {-webkit-text-stroke-color: $main-color--w;}
+        &.-h-b  {-webkit-text-stroke-color: $main-color--b;}
+        &.-h-c01{-webkit-text-stroke-color: $site-color01;}
+        &.-h-c02{-webkit-text-stroke-color: $site-color02;}
+        // 太さ
+        &.-h01{-webkit-text-stroke-width: 1px;}
+        &.-h02{-webkit-text-stroke-width: 2px;}
+    }
+
     // 折り返し禁止
     &.-ws-n{white-space: nowrap}
 
@@ -93,12 +101,12 @@ h1,h2,h3,h4,h5,h6,p,a,span,label,button{
     // フォントファミリー(ローカルフォント)
     &.-f-mincho01{font-family: mincho-font01;}// しっぽり
     &.-f-gothic01{font-family: gothic-font01;}// セザンヌ
-    &.-f-En01{font-family: e-font01;}         // BebasNeue
-    &.-f-En02{font-family: e-font02;}         // impact
-    &.-f-En03{font-family: e-font03;}         // garamond
+    &.-f-En01    {font-family: e-font01;}     // BebasNeue
+    &.-f-En02    {font-family: e-font02;}     // impact
+    &.-f-En03    {font-family: e-font03;}     // garamond
 
     // 色
-    &.-white{color: $main-color--w !important;}
+    &.-white  {color: $main-color--w !important;}
     &.-color01{color: $site-color01 !important;}
     &.-color02{color: $site-color02 !important;}
     &.-color03{color: $site-color03 !important;}
@@ -158,6 +166,7 @@ h1,h2,h3,h4,h5,h6,p,a,span,label,button{
         &.s-LL{
             font-size: 2.1rem;
             @include min(768){font-size: clamp(1.8rem, 3vw, 3rem);}
+            &.-s14{@include max(768){font-size: 1.4rem;}}
             &.-s16{@include max(768){font-size: 1.6rem;}}
         }
         &.s-3L{
@@ -165,6 +174,10 @@ h1,h2,h3,h4,h5,h6,p,a,span,label,button{
             @include min(768){font-size: clamp(2.1rem, 3vw, 4.8rem);}
             &.-s16{@include max(768){font-size: 1.6rem;}}
             &.-s18{@include max(768){font-size: 1.8rem;}}
+        }
+        &.s-4L{
+            font-size: 2.8rem;
+            @include min(768){font-size: clamp(2.1rem, 5vw, 7rem);}
         }
         &.s-kome{
             font-size: 1rem;
